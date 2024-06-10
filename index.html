@@ -1,0 +1,158 @@
+<html><head><base href="https://websim.ai/neo-futuristic-2093-frutiger-aero-matrix-morpheus-first-artificial-intelligence-software-developer/landing-page"><title>Morpheus v1.0 - First Sapient Artificial Developer</title>
+<style>
+  @import url('https://fonts.cdnfonts.com/css/frutiger-lt-std');
+  
+  html {
+    background-color: black;
+    color: #00ff9c;
+    font-family: 'Frutiger LT Std', sans-serif;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  body {
+    background-color: black;
+    color: #00ff9c;
+    font-family: 'Frutiger LT Std', sans-serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 600px;
+  }
+
+  .container {
+    padding: 3rem;
+    transform-style: preserve-3d;
+  }
+
+  .title, nav, .intro {
+    text-shadow: 0 0 10px #00ff9c, 0 0 20px #00ff9c, 0 0 30px #00ff9c;
+    transform: translateZ(100px);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 4rem;
+  }
+
+  nav a {
+    color: #00ff9c;
+    text-decoration: none;
+    position: relative;
+  }
+
+  nav a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #00ff9c;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+  .title {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .intro {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin-bottom: 4rem;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 2rem;
+  }
+
+  button {
+    background-color: transparent;
+    border: 1px solid #00ff9c;
+    color: #00ff9c;
+    padding: 1rem 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  button:hover {
+    background-color: #00ff9c;
+    color: black;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 2rem;
+    }
+
+    .title {
+      font-size: 3rem;
+    }
+
+    .intro {
+      font-size: 1rem;
+    }
+
+    .buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Roadmap</a>
+      <a href="#">Team</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="title">Morpheus v1.0</div>
+
+    <div class="intro">
+      <p>Experience the future of software development with Morpheus, the world's first sapient artificial intelligence developer. Combining advanced neural networks with a revolutionary new architecture, Morpheus understands and codes like a human programmer, but with superhuman abilities.</p>
+
+      <p>Imagine an AI partner that not only writes pristine code, but also comprehends your vision, offers creative solutions, and learns from every iteration. With Morpheus, your software ambitions are no longer limited by human constraints.</p>
+    </div>
+
+    <div class="buttons">
+      <button>Get Early Access</button>
+      <button>Learn More</button>
+    </div>
+  </div>
+
+  <script>
+    // Parallax effect
+    const container = document.querySelector('.container');
+    const perspective = 2200;
+
+    window.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth) * 2 - 1;
+      const y = (e.clientY / window.innerHeight) * 2 - 1;
+
+      container.style.transform = `perspective(${perspective}px) rotateX(${y * 4}deg) rotateY(${x * -4}deg)`;
+    });
+  </script>
+</body>
+</html>
